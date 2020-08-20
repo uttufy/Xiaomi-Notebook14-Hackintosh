@@ -1,6 +1,6 @@
 # [SUCCESS] Xiaomi-Notebook14-Hackintosh
 
-For Catalina 10.15.6 
+Tested on Catalina 10.15.6 
 
 ## Contents
 
