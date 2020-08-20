@@ -17,8 +17,6 @@ For Catalina 10.15.6
 
 ## Current Status
 
-- **Ethernet may not work on macOS10.15, view [#256](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/issues/256)**
-
   - If you are not using macOS10.15, it's still recommended to update the driver above
 - **Discrete graphic card**is not working yet
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
