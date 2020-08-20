@@ -14,3 +14,15 @@ For Catalina 10.15.6
 | Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch) |
 | Sound Card          | Realtek ALC298 (layout-id:30/99)           |
 | Wireless Card       | Intel Wireless 9560                       |
+
+## Current Status
+
+- **Ethernet may not work on macOS10.15, view [#256](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/issues/256)**
+
+  - If you are not using macOS10.15, it's still recommended to update the driver above
+- **Discrete graphic card**is not working yet
+- **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
+  - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
+- **Intel Wi-Fi (Intel Wireless 9560)** could work by additional configurations
+  - Buy a USB Wi-Fi dongle or supported wireless card
+  - Use [itlwm](https://github.com/OpenIntelWireless/itlwm) and [HeliPort](https://github.com/OpenIntelWireless/HeliPort) or [Black80211-Catalina](https://github.com/usr-sse2/Black80211-Catalina) to drive Intel Wi-Fi
