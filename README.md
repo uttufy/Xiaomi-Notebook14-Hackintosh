@@ -25,8 +25,9 @@ Tested on Catalina 10.15.6
 
   - If you are not using macOS10.16, it's still recommended to update the driver above
 - **Discrete graphic card** is not working yet
+- **Touchpad Gestures** is not working yet
+- **Display Brightness** is not working yet
 - **Sound** is not working yet
-- **Touchpad** is not working yet
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
 
