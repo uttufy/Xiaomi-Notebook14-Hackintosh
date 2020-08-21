@@ -1,7 +1,7 @@
 # [SUCCESS] Xiaomi-Notebook14-Hackintosh
 
 Tested on Catalina 10.15.6 
-
+To install use offline installer
 ## Contents
 
 - [Configuration](#configuration)
