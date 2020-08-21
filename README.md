@@ -1,7 +1,7 @@
 # [SUCCESS] Xiaomi-Notebook14-Hackintosh
 
 Tested on Catalina 10.15.6 
-
+To install use offline installer
 ## Contents
 
 - [Configuration](#configuration)
@@ -25,11 +25,11 @@ Tested on Catalina 10.15.6
 
   - If you are not using macOS10.16, it's still recommended to update the driver above
 - **Discrete graphic card** is not working yet
+- **Touchpad Gestures** is not working yet
+- **Display Brightness** is not working yet
+- **Sound** is not working yet
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
-- **Intel Wi-Fi (Intel Wireless 9560)** could work by additional configurations
-  - Buy a USB Wi-Fi dongle or supported wireless card
-  - Use [itlwm](https://github.com/OpenIntelWireless/itlwm) and [HeliPort](https://github.com/OpenIntelWireless/HeliPort) or [Black80211-Catalina](https://github.com/usr-sse2/Black80211-Catalina) to drive Intel Wi-Fi
 
 ## Credits
 - **Special Thanks to [daliansky](https://github.com/daliansky) for providing [XiaoMi-Pro-Hackintosh]**(https://github.com/daliansky/XiaoMi-Pro-Hackintosh).
