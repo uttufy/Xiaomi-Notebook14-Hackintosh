@@ -22,7 +22,7 @@ To install use offline installer
 | Wireless Card       | Intel Wireless 9560                       |
 
 ## Current Status
-
+- **Touchpad issue in Windows** there may occur a bug in you try to dual boot with windows i.e touchpad Lock occurs and If that occurs to fix it yo need to reset windows inorder to fix it
   - If you are not using macOS10.16, it's still recommended to update the driver above
 - **Discrete graphic card** is not working yet
 - **Touchpad Gestures** is not working yet
