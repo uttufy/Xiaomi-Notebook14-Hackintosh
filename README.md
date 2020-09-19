@@ -32,9 +32,9 @@ To install use offline installer
 - **Sound** is working need to fix headphone port <br> [Headphone Fix](https://www.elitemacx86.com/threads/fix-audio-distortion-when-using-headphones-on-laptops.185/) <br> Tip: Read-only file System Catalina "sudo mount -uw /" 
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
-
-## Extra
 <!---
+## Extra
+
 <pre><font color="#3465A4"><b>System:</b></font>
   <font color="#3465A4"><b>Kernel:</b></font> 5.4.0-7642-generic x86_64 <font color="#3465A4"><b>bits:</b></font> 64 <font color="#3465A4"><b>compiler:</b></font> gcc <font color="#3465A4"><b>v:</b></font> 9.3.0 
   <font color="#3465A4"><b>Desktop:</b></font> Gnome 3.36.4 <font color="#3465A4"><b>Distro:</b></font> Pop!_OS 20.04 LTS 
