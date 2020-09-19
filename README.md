@@ -20,6 +20,7 @@ To install use offline installer
 | Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch) |
 | Sound Card          | Realtek ALC233                             |
 | Wireless Card       | Intel Wireless 9560                        |
+| Touchpad            | ELAN2304                      |
 
 ## Current Status
 - **Touchpad issue in Windows** there may occur a bug in you try to dual boot with windows i.e touchpad Lock occurs and If that occurs to fix it you need to reset windows inorder to fix it
