@@ -34,7 +34,7 @@ To install use offline installer
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
 
 ## Extra
-
+<!---
 <pre><font color="#3465A4"><b>System:</b></font>
   <font color="#3465A4"><b>Kernel:</b></font> 5.4.0-7642-generic x86_64 <font color="#3465A4"><b>bits:</b></font> 64 <font color="#3465A4"><b>compiler:</b></font> gcc <font color="#3465A4"><b>v:</b></font> 9.3.0 
   <font color="#3465A4"><b>Desktop:</b></font> Gnome 3.36.4 <font color="#3465A4"><b>Distro:</b></font> Pop!_OS 20.04 LTS 
@@ -75,7 +75,7 @@ To install use offline installer
   <font color="#3465A4"><b>ID-1:</b></font> /dev/sda <font color="#3465A4"><b>vendor:</b></font> Samsung <font color="#3465A4"><b>model:</b></font> MZNLH512HALU-00000 <font color="#3465A4"><b>size:</b></font> 476.94 GiB 
   <font color="#3465A4"><b>temp:</b></font> 38 C 
 </pre>
-
+-->
 ## Credits
 - **Special Thanks to [daliansky](https://github.com/daliansky) for providing [XiaoMi-Pro-Hackintosh]**(https://github.com/daliansky/XiaoMi-Pro-Hackintosh).
 - Thanks to [Acidanthera](https://github.com/acidanthera) for providing [AppleALC](https://github.com/acidanthera/AppleALC), [AppleSupportPkg](https://github.com/acidanthera/AppleSupportPkg), [HibernationFixup](https://github.com/acidanthera/HibernationFixup), [Lilu](https://github.com/acidanthera/Lilu), [NVMeFix](https://github.com/acidanthera/NVMeFix), [OcBinaryData](https://github.com/acidanthera/OcBinaryData), [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg), [VirtualSMC](https://github.com/acidanthera/VirtualSMC), [VoodooInput](https://github.com/acidanthera/VoodooInput), [VoodooPS2](https://github.com/acidanthera/VoodooPS2), and [WhateverGreen](https://github.com/acidanthera/WhateverGreen).
