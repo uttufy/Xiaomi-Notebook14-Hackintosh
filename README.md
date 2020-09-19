@@ -28,7 +28,7 @@ To install use offline installer
   - If you are not using macOS10.16, it's still recommended to update the driver above
 - **Discrete graphic card** is not working yet
 - **Touchpad Gestures** is not working yet
-- **Display Brightness** is not working yet
+- **Display Brightness** is works after using [Enable macOS HiDPI](https://github.com/xzhih/one-key-hidpi)
 - **Sound** is working need to fix headphone port <br> [Headphone Fix](https://www.elitemacx86.com/threads/fix-audio-distortion-when-using-headphones-on-laptops.185/) <br> Tip: Read-only file System Catalina "sudo mount -uw /" 
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
