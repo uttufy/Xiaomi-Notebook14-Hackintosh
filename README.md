@@ -25,7 +25,7 @@ To install use offline installer
 
 ## Current Status
 - **Discrete graphic card** is not working yet
-- **Touchpad Gestures** is not working yet
+- **Touchpad Gestures** works after adding patched DSDT/SSDT in OC
 - **Display Brightness** is works after using [Enable macOS HiDPI](https://github.com/xzhih/one-key-hidpi)
 - **Sound** is working need to fix headphone port <br> [Headphone Fix](https://www.elitemacx86.com/threads/fix-audio-distortion-when-using-headphones-on-laptops.185/) <br> Tip: Read-only file System Catalina "sudo mount -uw /" 
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
