@@ -24,8 +24,6 @@ To install use offline installer
 | Touchpad            | I2C ELAN2304                               |
 
 ## Current Status
-- **Touchpad issue in Windows** there may occur a bug in you try to dual boot with windows i.e touchpad Lock occurs and If that occurs to fix it you need to reset windows inorder to fix it
-  - If you are not using macOS10.16, it's still recommended to update the driver above
 - **Discrete graphic card** is not working yet
 - **Touchpad Gestures** is not working yet
 - **Display Brightness** is works after using [Enable macOS HiDPI](https://github.com/xzhih/one-key-hidpi)
