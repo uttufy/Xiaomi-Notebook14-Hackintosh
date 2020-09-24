@@ -3,10 +3,13 @@
 Tested on Catalina 10.15.6 
 To install use offline installer 
 [Offline Installer Tutorial](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/master/offline-installer-guide/offline-part-2/windows.md)
+
+
 ## Contents
 
 - [Configuration](#configuration)
 - [Current Status](#current-status)
+- [DSDT-SSDT](#dsdt-ssdt)
 - [Credits](#credits)
 
 ## Configuration
@@ -30,6 +33,11 @@ To install use offline installer
 - **Sound** is working need to fix headphone port <br> [Headphone Fix](https://www.elitemacx86.com/threads/fix-audio-distortion-when-using-headphones-on-laptops.185/) <br> Tip: Read-only file System Catalina "sudo mount -uw /" 
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
+## DSDT-SSDT
+- I have included my DSDT/SSDT in the seprate folder [HERE](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/tree/master/DSDT:SSDT). The DSDT & SSDT are already patched. I recommend dumping your DSDT/SSDT using OC [Dumping DSDT Manually](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html).
+
+***Note : 
+
 <!---
 ## Extra
 
