@@ -36,7 +36,7 @@ To install use offline installer
 ## DSDT-SSDT
 - I have included my DSDT/SSDT in the seprate folder [HERE](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/tree/master/DSDT:SSDT). The DSDT & SSDT are already patched. I recommend dumping your DSDT/SSDT using OC [Dumping DSDT Manually](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html).
 
-***Note : 
+***Note*** : You can use my pre-compiled DSDT-SSDT but I would not recommend that because Mapping varies even with same OEM.
 
 <!---
 ## Extra
