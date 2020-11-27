@@ -11,3 +11,8 @@ Then you have to patch your own SSDT
 - Apply common patches. Check the common patching section https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/
 - Then compile the patched files. Add it to your OC/ACPI folder.
 Full guide link https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/
+### Tip
+-If you are using properTree for editing OC config.plist.
+If it shows 
+https://imgur.com/BuK8EWi.
+**Select No**
