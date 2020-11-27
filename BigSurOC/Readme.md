@@ -15,7 +15,7 @@ Full guide link https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ss
 ### Tip
 - If you are using properTree for editing OC config.plist.
 If it shows 
-https://imgur.com/BuK8EWi.
+https://imgur.com/BuK8EWi. <br>
 **Select No**
 - Some tutorial on patching DSDT/SSDT:
 <br>
