@@ -13,7 +13,7 @@ Then you have to patch your own SSDT
 Full guide link https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/
 
 ### Tip
--If you are using properTree for editing OC config.plist.
+- If you are using properTree for editing OC config.plist.
 If it shows 
 https://imgur.com/BuK8EWi.
 **Select No**
