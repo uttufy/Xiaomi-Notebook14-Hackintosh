@@ -1,6 +1,6 @@
 ## Important Note 
 - In order to make Touchpad gestures work add your ****DSDT.aml**** file in **OC/ACPI** 
-- #### Headphone port and mic are not working yet
+- ####  mic are not working yet
 ### How to get DSDT.aml ?
 For that you need to dump DSDT
 Guide: https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html
