@@ -22,7 +22,7 @@ To install use offline installer
 | Hard Disk           | Samsung NVMe SSD Controller                |
 | Integrated Graphics | Intel UHD Graphics 630                     |
 | Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch) |
-| Sound Card          | Realtek ALC233                             |
+| Sound Card          | Realtek ALC256                             |
 | Wireless Card       | Intel Wireless 9560                        |
 | Touchpad            | I2C ELAN2304                               |
 
