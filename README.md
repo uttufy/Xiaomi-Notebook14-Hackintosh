@@ -1,6 +1,6 @@
 # [SUCCESS] Xiaomi-Notebook14-Hackintosh
 
-Tested on Catalina 10.15.6 
+Tested on Catalina and BigSur
 To install use offline installer 
 [Offline Installer Tutorial](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/master/offline-installer-guide/offline-part-2/windows.md)
 
@@ -11,6 +11,7 @@ Make Sure to Change SMBIOS from config.plist
 - [Configuration](#configuration)
 - [Current Status](#current-status)
 - [DSDT-SSDT](#dsdt-ssdt)
+- [BigSur Readme](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/blob/master/BigSurOC/Readme.md)
 - [Credits](#credits)
 
 ## Configuration
