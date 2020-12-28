@@ -11,7 +11,7 @@ Make Sure to Change SMBIOS from config.plist
 - [Configuration](#configuration)
 - [Current Status](#current-status)
 - [DSDT-SSDT](#dsdt-ssdt)
-- [BigSur Readme](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/blob/master/BigSurOC/Readme.md)
+- [BigSurOC Readme](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/blob/master/BigSurOC/Readme.md)
 - [Credits](#credits)
 
 ## Configuration
