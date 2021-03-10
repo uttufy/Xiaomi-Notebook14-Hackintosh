@@ -2,7 +2,7 @@
 
 Tested on Notebook14 Horizon Edition (i5).
 
-If Wifi is working at installation then use offline installer 
+If Wifi is not working at installation then use offline installer 
 [Offline Installer Tutorial](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/master/offline-installer-guide/offline-part-2/windows.md)
 
 ***Make Sure to Change SMBIOS from config.plist***
