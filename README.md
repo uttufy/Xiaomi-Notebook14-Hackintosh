@@ -1,70 +1,65 @@
-# [SUCCESS] Xiaomi-Notebook14-Hackintosh
+#  Xiaomi-Notebook14-Hackintosh
 
-Tested on Catalina and BigSur
-To install use offline installer 
+Tested on Notebook14 Horizon Edition (i5).
+
+If Wifi is working at installation then use offline installer 
 [Offline Installer Tutorial](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/master/offline-installer-guide/offline-part-2/windows.md)
 
-Make Sure to Change SMBIOS from config.plist
+***Make Sure to Change SMBIOS from config.plist***
 
 ## Contents
 
-- [Configuration](#configuration)
-- [Current Status](#current-status)
-- [DSDT-SSDT](#dsdt-ssdt)
-- [BigSurOC Readme](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/blob/master/BigSurOC/Readme.md)
-- [Credits](#credits)
+- [[SUCCESS] Xiaomi-Notebook14-Hackintosh](#success-xiaomi-notebook14-hackintosh)
+  - [Contents](#contents)
+  - [Configuration](#configuration)
+  - [Current Status](#current-status)
+  - [Improvements](#Improvements)
+  - [Credits](#credits)
 
 ## Configuration
 
-| Specifications | Detail                                                  |
-| ------------------- | ------------------------------------------- |
-| Computer model      | Xiaomi Notebook 14 Horizon Edition 2020 (MX350/GTX)      |
-| Processor           | Intel Core i5-10210U/i7 Processor          |
-| Memory              | 8GB/16GB Samsung DDR4 2400MHz              |
-| Hard Disk           | Samsung NVMe SSD Controller                |
-| Integrated Graphics | Intel UHD Graphics 630                     |
-| Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch) |
-| Sound Card          | Realtek ALC256                             |
-| Wireless Card       | Intel Wireless 9560                        |
-| Touchpad            | I2C ELAN2304                               |
+| Specifications      | Detail                                              |
+| ------------------- | --------------------------------------------------- |
+| Computer model      | Xiaomi Notebook 14 Horizon Edition 2020 (MX350/GTX) |
+| Processor           | Intel Core i5-10210U/i7 Processor                   |
+| Memory              | 8GB/16GB Samsung DDR4 2400MHz                       |
+| Hard Disk           | Samsung NVMe SSD Controller                         |
+| Integrated Graphics | Intel UHD Graphics 630                              |
+| Monitor             | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch)          |
+| Sound Card          | Realtek ALC256                                      |
+| Wireless Card       | Intel Wireless 9560                                 |
+| Touchpad            | I2C ELAN2304                                        |
 
 ## Current Status
-- **Discrete graphic card** is not working yet
-- **Touchpad Gestures** works after adding patched DSDT/SSDT in OC
+> ### OpenCore 0.6.7 
+ 
+- WIFI/Bluetooth Works 
+- Audio Works
+- Headphone Mic Works
+- **Internal Mic Not Working**
+- Power Management works (Battery last for about 5-6 hours)
+- Touchpad Gestures Works
+- HW acceleration enabled
+- **Discrete graphic card** is not supported
+
+> ### OpenCore 0.5.x 
+
+- **Discrete graphic card** is not supported
+- **Touchpad Gestures** works after adding patched DSDT/SSDT in OC [**Refer Here**](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/blob/master/DSDT.md)
 - **Display Brightness** is works after using [Enable macOS HiDPI](https://github.com/xzhih/one-key-hidpi)
 - **Sound** is working need to fix headphone port <br> [Headphone Fix](https://www.elitemacx86.com/threads/fix-audio-distortion-when-using-headphones-on-laptops.185/) <br> Tip: Read-only file System Catalina "sudo mount -uw /" 
 - **Intel Bluetooth** may cause sleep problems and does not support some Bluetooth devices
   - View [Work-Around-with-Bluetooth](https://github.com/daliansky/XiaoMi-Pro-Hackintosh/wiki/Work-Around-with-Bluetooth)
-## DSDT-SSDT
 
- In order to make the touchpad work you need patched SSDT/DSDT. I have not included patched DSDT/SSDT
-(https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/tree/master/EFI/OC)
- as DSDT may differ for each system and might cause problems.
-
-**Method 1 (Hard)**
-
-- You need to first dump you own DSDT. Refer here on [how to dump your DSDT](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html)
--  After dumping first you need to decompile the files.
-- Apply common patches. Check the common patching section [Patching LAPTOP DSDT/SSDTs](https://www.tonymacx86.com/threads/guide-patching-laptop-dsdt-ssdts.152573/)
-- Then compile the patched files. Add it to your OC/ACPI folder.
-
-So ACPI folder will look something like this.
-[SCREENSHOT](https://imgur.com/vELH8lJ)
-
-**Method 2 (Easy - Not recommended)**
-
-- Use my precompiled files [Refer here](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/tree/master/DSDT:SSDT/patched%20compiled)
-- Copy it to your OC/ACPI directory. 
-- Add the newly added files entry in config.plist
-- Might cause a problem or might work.
-
-Gesture will work then
-[Screenshot](https://imgur.com/6eVyTuK)
-
-- I have included my DSDT/SSDT in the seprate folder [HERE](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/tree/master/DSDT:SSDT). The DSDT & SSDT are already patched. I recommend dumping your DSDT/SSDT using OC [Dumping DSDT Manually](https://dortania.github.io/Getting-Started-With-ACPI/Manual/dump.html).
-
-***Note*** : You can use my pre-compiled DSDT-SSDT but I would not recommend that because Mapping varies even with same OEM.
-
+## Improvements
+- Enable macOS HiDPI [Refer Here](https://github.com/xzhih/one-key-hidpi)
+> ### Microphone Fix (Headset) Tested on OC 0.6.7
+- Download Combojack [here.](https://github.com/hackintosh-stuff/ComboJack)
+- Follow the documentation to install combojack.
+- Go to system Preferences > Sound > Input and choose Line In as input device.
+- Insert headphone, combojack pop-up will appear, select headset from the list.
+- Still having an issue, try disabling ambient noise reduction.
+- Done. Enjoy..!
 <!---
 ## Extra
 
