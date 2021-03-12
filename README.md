@@ -35,7 +35,7 @@ If Wifi is not working at installation then use offline installer
  
 - WIFI/Bluetooth Works 
 - Audio Works
-- Headphone Mic Works
+- Headphone Mic Works **Refer in improvement section**
 - **Internal Mic Not Working**
 - Power Management works (Battery last for about 5-6 hours)
 - Touchpad Gestures Works
