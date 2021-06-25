@@ -11,7 +11,7 @@
 This repo contains information for getting macOS working on a **Xiaomi Notebook 14 Horizon Edition** laptop.
 
 This is intended to create a "fully" functional (as far as possible) hackintosh for the Xiaomi Notebook 14.
-If you would like to get started with creating a hackintosh on your MBXP but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
+If you would like to get started with creating a hackintosh on your laptop but have non experience, I would highly recommend following [**Dortania's OpenCore Install guide**](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
 With each new release of macOS we need to resolve each new "minor issue" we run into. The installation is not perfect yet since it's a continuos work-in-progress, but I'm glad to say that **I learned a lot** in the meantime. All of the steps I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert so any help to get this project functional is very appreciated!
 
  If internet is not working at installation then create [offline installer](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/master/offline-installer-guide/offline-part-2/windows.md).
@@ -154,7 +154,7 @@ Download [Combojack.](https://github.com/hackintosh-stuff/ComboJack)
     <Summary><strong>MacOS HiDPI</strong></summary>
 <br>
 
-⚠️ Warning one-key-hidpi is know to cause [Screen underscaled after sleep](https://github.com/xzhih/one-key-hidpi/issues/33), [HiDPI lag](https://github.com/xzhih/one-key-hidpi/issues/194).
+⚠️ Warning one-key-hidpi is known to cause [Screen underscaled after sleep](https://github.com/xzhih/one-key-hidpi/issues/33), [HiDPI lag](https://github.com/xzhih/one-key-hidpi/issues/194).
 
 MacOS HiDPI [One-Key-HiDPI REPO](https://github.com/xzhih/one-key-hidpi)
 </details>
