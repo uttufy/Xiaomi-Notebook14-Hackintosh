@@ -55,20 +55,20 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 
 ## Current Status
 
-| Components\OS     | BigSur | Monterey Beta |
+| Components\OS     | BigSur | Monterey 12.0.1 |
 | ----------------- | :----: | :-----------: |
-| Touchpad/Gestures |   ✅    |       🤷‍♂️       |
+| Touchpad/Gestures |   ✅    |       ✅       |
 | Keyboard          |   ✅    |       ✅       |
-| Audio             |   🟢    |       🟡       |
-| Microphone        |   🟢    |       ❌       |
-| Wifi              |   ✅    |       🟡       |
-| Bluetooth         |   ✅    |       ❌       |
-| Sleep/Wake        |   ✅    |       🤷‍♂️       |
-| Power Management  |   ✅    |       🤷‍♂️       |
+| Audio             |   🟢    |       🟢       |
+| Microphone        |   🟢    |       🟢       |
+| Wifi              |   ✅    |       ✅       |
+| Bluetooth         |   ✅    |       ✅       |
+| Sleep/Wake        |   ✅    |       ✅       |
+| Power Management  |   ✅    |       ✅       |
 | Graphic Acc.      |   ✅    |       ✅       |
-| Backlight         |   ✅    |       ❌       |
-| Brightness Key    |   ✅    |       ❌       |
-| Hibernation       |   🤷‍♂️    |       🤷‍♂️       |
+| Backlight         |   ✅    |       ✅       |
+| Brightness Key    |   ✅    |       ✅       |
+| Hibernation       |   🤷‍♂️    |       ❌       |
 
 ```md
 ✅  : Working out of the box
@@ -180,7 +180,7 @@ If you have black screen for five minutes and get no response from the device, p
 
 | Item                                                                                           | Version    | Remark                                       |
 | :--------------------------------------------------------------------------------------------- | :--------- | :------------------------------------------- |
-| MacOS                                                                                          | 11.4       | BigSur                                       |
+| MacOS                                                                                          | 12.0.1     | BigSur                                       |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                                | 0.7.4      | Default Bootloader                           |
 | [Lilu](https://github.com/acidanthera/Lilu/releases)                                           | 1.5.6      | Kext/process/framework/library patcher       |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                         | 1.5.4      | Handle Graphics card                         |
