@@ -180,7 +180,7 @@ If you have black screen for five minutes and get no response from the device, p
 
 | Item                                                                                           | Version    | Remark                                       |
 | :--------------------------------------------------------------------------------------------- | :--------- | :------------------------------------------- |
-| MacOS                                                                                          | 12.0.1     | BigSur                                       |
+| MacOS                                                                                          | 12.0.1     | Monterey                                     |
 | [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                                | 0.7.4      | Default Bootloader                           |
 | [Lilu](https://github.com/acidanthera/Lilu/releases)                                           | 1.5.6      | Kext/process/framework/library patcher       |
 | [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                         | 1.5.4      | Handle Graphics card                         |
