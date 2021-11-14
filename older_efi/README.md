@@ -41,7 +41,7 @@
   <font color="#3465A4"><b>Type:</b></font> Laptop <font color="#3465A4"><b>System:</b></font> TIMI <font color="#3465A4"><b>product:</b></font> Mi NoteBook Horizon Edition 14 <font color="#3465A4"><b>v:</b></font> N/A 
   <font color="#3465A4"><b>serial:</b></font> &lt;filter&gt; 
   <font color="#3465A4"><b>Mobo:</b></font> TIMI <font color="#3465A4"><b>model:</b></font> TM1941 <font color="#3465A4"><b>v:</b></font> 014 <font color="#3465A4"><b>serial:</b></font> &lt;filter&gt; <font color="#3465A4"><b>UEFI:</b></font> TIMI 
-  <font color="#3465A4"><b>v:</b></font> XMACM401P0000 <font color="#3465A4"><b>date:</b></font> 03/20/2020 
+  <font color="#3465A4"><b>date:</b></font> 03/20/2020 
 <font color="#3465A4"><b>Battery:</b></font>
   <font color="#3465A4"><b>ID-1:</b></font> BAT0 <font color="#3465A4"><b>charge:</b></font> 42.5 Wh <font color="#3465A4"><b>condition:</b></font> 49.4/47.0 Wh (105%) 
   <font color="#3465A4"><b>model:</b></font> SUNWODA R14B01W <font color="#3465A4"><b>status:</b></font> Discharging 
