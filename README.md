@@ -44,7 +44,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 | Specifications | Detail                                              |
 | -------------- | --------------------------------------------------- |
 | Computer model | Xiaomi Notebook 14 Horizon Edition 2020 (MX350/GTX) |
-| Processor      | Intel Core i3-10110U/ i5-10210U/ i7-10510U          |
+| Processor      | Intel Core i3-10110U/ [i5-10210U](https://ark.intel.com/content/www/us/en/ark/products/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz.html)/ i7-10510U          |
 | Memory         | 8GB/16GB Samsung DDR4 2400MHz                       |
 | Hard Disk      | Samsung NVMe SSD Controller                         |
 | Graphics       | Intel UHD Graphics 10th Gen, NVIDIA MX350           |
