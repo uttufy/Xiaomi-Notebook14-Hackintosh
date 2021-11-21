@@ -159,7 +159,32 @@ Download [Combojack.](https://github.com/hackintosh-stuff/ComboJack)
 MacOS HiDPI [One-Key-HiDPI REPO](https://github.com/xzhih/one-key-hidpi)
 </details>
 
-[Booting MacOS without installer pendrive](https://www.youtube.com/watch?v=qmYEQoFRFH0&list=LL&index=1)
+<details>
+  <Summary><strong> For Dual Boot </strong></Summary>
+  Note: After resetting NVRAM, you need to do the steps from 4 to 6.
+  
+ 1.  Make sure that `Microsoft` is in the same folder as `BOOT` and `OC`
+ 2. Boot to Windows from BOOT MENU
+ 3. Download [EasyUEFI](https://www.easyuefi.com/index-us.html)
+ 4. Open EasyUEFI and click `Manage EFI Boot Options`
+ 5. Click the `Create a new entry` icon (second icon from the center column)
+ 6. Do the following:
+    
+    1. Select the Type: `Linux or other OS` and write as description: `OpenCore`
+    2. Select `EFI` as target partition
+    3. Click `browse` and locate the `OpenCore.efi` file and click `OK`
+    4. Click `OK` again to add the entry
+    5. Once the entry is added, click on OpenCore and start clicking the `arrow up` button (first button from the center column) until OpenCore appears on the top of the table.
+    
+ 7. After doing this restart your laptop and you will see opencore booting as priority option.
+ 8. Boot to Big Sur
+ 9. Download  [OpenCore Configurator](https://mackie100projects.altervista.org/download-opencore-configurator) (OCC) 
+ 10. Open your Config.plist with OCC
+ 11. Go to Misc and click Entries tab
+ 12. Click `+` button on the right bottom. A new entry will be created and you will see a browse button
+ 13. Click the browse button and for windows users, go to your EFI folder  and locate `bootmgfw.efi`  (\EFI\Microsoft\Boot\bootmgfw.efi) and click open
+ 14. Change the entry name from `bootmgfw` to `Windows`<br>
+<!-- [Booting MacOS without installer pendrive](https://www.youtube.com/watch?v=qmYEQoFRFH0&list=LL&index=1) -->
 </details>
 
 ## FAQ
