@@ -62,7 +62,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 | Audio             |   🟢    |       🟢       |
 | Microphone        |   🟢    |       🟢       |
 | Wifi              |   ✅    |       ✅       |
-| Bluetooth         |   ✅    |       ✅       |
+| Bluetooth         |   ✅    |       ❌       |
 | Sleep/Wake        |   🟨    |       🟨       |
 | Power Management  |   ✅    |       ✅       |
 | Graphic Acc.      |   ✅    |       ✅       |
