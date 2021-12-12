@@ -68,7 +68,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 | Graphic Acc.      |   ✅    |       ✅       |
 | Backlight         |   ✅    |       ✅       |
 | Brightness Key    |   ✅    |       ✅       |
-| Hibernation       |   🤷‍♂️    |       ❌       |
+| Hibernation       |   🤷‍♂️    |       🟨       |
 
 ```md
 ✅  : Working out of the box
@@ -137,8 +137,6 @@ Default **SMBIOS** settings of this repo is `MacBookPro16,3` ~~`MacBookPro14,1`~
 <details>
     <Summary><strong>Microphone Fix</strong></summary>
 <br>
-
-⚠️ Warning combojack will break macOS monterey beta.
 
 Download [Combojack.](https://github.com/hackintosh-stuff/ComboJack)
 
