@@ -41,34 +41,34 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 
 ## System Configuration
 
-| Specifications | Detail                                              |
-| -------------- | --------------------------------------------------- |
-| Computer model | Xiaomi Notebook 14 Horizon Edition 2020 (MX350/GTX) |
-| Processor      | Intel Core i3-10110U/ [i5-10210U](https://ark.intel.com/content/www/us/en/ark/products/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz.html)/ i7-10510U          |
-| Memory         | 8GB/16GB Samsung DDR4 2400MHz                       |
-| Hard Disk      | Samsung NVMe SSD Controller                         |
-| Graphics       | Intel UHD Graphics 10th Gen, NVIDIA MX350           |
-| Monitor        | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch)          |
-| Sound Card     | Realtek ALC256                                      |
-| Wireless Card  | Intel Wireless 9560                                 |
-| Touchpad       | I2C ELAN2304                                        |
+| Specifications | Detail                                                                                                                                                               |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Computer model | Xiaomi Notebook 14 Horizon Edition 2020 (MX350/GTX)                                                                                                                  |
+| Processor      | Intel Core i3-10110U/ [i5-10210U](https://ark.intel.com/content/www/us/en/ark/products/195436/intel-core-i510210u-processor-6m-cache-up-to-4-20-ghz.html)/ i7-10510U |
+| Memory         | 8GB/16GB Samsung DDR4 2400MHz                                                                                                                                        |
+| Hard Disk      | Samsung NVMe SSD Controller                                                                                                                                          |
+| Graphics       | Intel UHD Graphics 10th Gen, NVIDIA MX350                                                                                                                            |
+| Monitor        | BOE NV156FHM-N61 FHD 1920x1080 (15.6 inch)                                                                                                                           |
+| Sound Card     | Realtek ALC256                                                                                                                                                       |
+| Wireless Card  | Intel Wireless 9560                                                                                                                                                  |
+| Touchpad       | I2C ELAN2304                                                                                                                                                         |
 
 ## Current Status
 
-| Components\OS     | BigSur | Monterey 12.0.1 |
-| ----------------- | :----: | :-----------: |
-| Touchpad/Gestures |   ✅    |       ✅       |
-| Keyboard          |   ✅    |       ✅       |
-| Audio             |   🟢    |       🟢       |
-| Microphone        |   🟢    |       🟢       |
-| Wifi              |   ✅    |       ✅       |
-| Bluetooth         |   ✅    |       ❌       |
-| Sleep/Wake        |   🟨    |       🟢       |
-| Power Management  |   ✅    |       ✅       |
-| Graphic Acc.      |   ✅    |       ✅       |
-| Backlight         |   ✅    |       ✅       |
-| Brightness Key    |   ✅    |       ✅       |
-| Hibernation       |   🤷‍♂️    |       🟨       |
+| Components\OS     | BigSur | Monterey 12.0.1/12.1 |
+| ----------------- | ------ | -------------------- |
+| Touchpad/Gestures | ✅      | ✅                    |
+| Keyboard          | ✅      | ✅                    |
+| Audio             | 🟢      | 🟢                    |
+| Microphone        | 🟢      | 🟢                    |
+| Wifi              | ✅      | ✅                    |
+| Bluetooth         | ✅      | ❌                    |
+| Sleep/Wake        | 🟨      | 🟢                    |
+| Power Management  | ✅      | ✅                    |
+| Graphic Acc.      | ✅      | ✅                    |
+| Backlight         | ✅      | ✅                    |
+| Brightness Key    | ✅      | ✅                    |
+| Hibernation       | 🤷‍♂️      | 🟨                    |
 
 ```md
 ✅  : Working out of the box
@@ -201,26 +201,27 @@ If you have black screen for five minutes and get no response from the device, p
 
 ## Update tracker
 
-| Item                                                                                           | Version    | Remark                                       |
-| :--------------------------------------------------------------------------------------------- | :--------- | :------------------------------------------- |
-| MacOS                                                                                          | 12.0.1     | Monterey                                     |
-| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                                | 0.7.5      | Default Bootloader                           |
-| [Lilu](https://github.com/acidanthera/Lilu/releases)                                           | 1.5.6      | Kext/process/framework/library patcher       |
-| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                         | 1.5.4      | Handle Graphics card                         |
-| [AppleALC](https://github.com/acidanthera/AppleALC/releases)                                   | 1.6.5      | Handle/fix onboard audio                     |
-| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases)                                 | 1.2.4      | Power management                             |
-| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases)                   | 1.4.4      | Handle hibernate status                      |
-| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.0.1      | Handle Bluetooth                             |
-| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases)                            | 2.0.0 | Handle native Wi-Fi card                     |
-| [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/)                   | 1.0.6      | Fake Ethernet card                           |
-| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases)                                  | 1.0.4      | Disable TouchID                              |
-| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases)                                     | 1.0.9      | Fix for NVMe SSDs                            |
-| [RestrictEvents](https://github.com/acidanthera/RestrictEvents/releases)                       | 1.0.1      | Block unwanted processes                     |
-| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases)                                  | 2.5.6      | Handle I2C device                            |
-| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases)                               | 2.5.6      | Touchpad I2C satellite                       |
-| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases)                       | 2.2.6      | Enable keyboard, alternative trackpad driver |
-| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases)                     | 1.2.7      | SMC chip emulation                           |
-| [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases)                      | 0.7.6      | Inject USB ports                             |
+as per latest commit
+| Item                                                                                           | Version | Remark                                       |
+| :--------------------------------------------------------------------------------------------- | :------ | :------------------------------------------- |
+| MacOS                                                                                          | 12.0.1  | Monterey                                     |
+| [OpenCore](https://github.com/acidanthera/OpenCorePkg/releases)                                | 0.7.7   | Default Bootloader                           |
+| [Lilu](https://github.com/acidanthera/Lilu/releases)                                           | 1.5.9   | Kext/process/framework/library patcher       |
+| [WhateverGreen](https://github.com/acidanthera/whatevergreen/releases)                         | 1.5.6   | Handle Graphics card                         |
+| [AppleALC](https://github.com/acidanthera/AppleALC/releases)                                   | 1.6.8   | Handle/fix onboard audio                     |
+| [CPUFriend](https://github.com/acidanthera/CPUFriend/releases)                                 | 1.2.4   | Power management                             |
+| [HibernationFixup](https://github.com/acidanthera/HibernationFixup/releases)                   | 1.4.5   | Handle hibernate status                      |
+| [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) | 2.1.0   | Handle Bluetooth                             |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM/releases/)                         | 2.1.0   | Handle Bluetooth                             |
+| [AirportItlwm](https://github.com/OpenIntelWireless/itlwm/releases)                            | 2.1.0   | Handle native Wi-Fi card                     |
+| [NullEthernet](https://bitbucket.org/RehabMan/OS-X-Null-Ethernet/downloads/)                   | 1.0.6   | Fake Ethernet card                           |
+| [NoTouchID](https://github.com/al3xtjames/NoTouchID/releases)                                  | 1.0.4   | Disable TouchID                              |
+| [NVMeFix](https://github.com/acidanthera/NVMeFix/releases)                                     | 1.0.9   | Fix for NVMe SSDs                            |
+| [VoodooI2C](https://github.com/alexandred/VoodooI2C/releases)                                  | 2.5.6   | Handle I2C device                            |
+| [VoodooI2CHID](https://github.com/alexandred/VoodooI2C/releases)                               | 2.5.6   | Touchpad I2C satellite                       |
+| [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases)                       | 2.2.7   | Enable keyboard, alternative trackpad driver |
+| [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases)                     | 1.2.8   | SMC chip emulation                           |
+| [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases)                      | 0.7.6   | Inject USB ports                             |
 
 ## Changelog
 
