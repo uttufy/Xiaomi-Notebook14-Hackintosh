@@ -5,6 +5,7 @@
 - Remove `USBMap.kext`
 - Add `USBToolBox.kext`
 - Add `UTBMap.kext`
+- Remove `ECEnabler.kext`
 
 **Bugs** 
 - Fix issue #12
