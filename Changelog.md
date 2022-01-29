@@ -1,5 +1,14 @@
 # XiaoMi NoteBook Pro EFI Changelog
 
+## 29-10-2022
+**Update**
+- Remove `USBMap.kext`
+- Add `USBToolBox.kext`
+- Add `UTBMap.kext`
+
+**Bugs** 
+- Fix issue #12
+
 ## 14-01-2022
  **Update**
 - Update `OpenCore` v0.7.7
@@ -17,9 +26,9 @@
 **OpenCore**
 
 - Update config.plist to support OpenCore v. 0.7.7:
-  - Added `Booter -> Quirks -> ResizeAppleGpuBars` key and set its value to `-1` (failsafe)
-  - Added `UEFI -> Quirks -> ResizeGpuBars` key and set its value to `-1` (failsafe)
-  - Updated `UEFI -> Drivers` structure section for enabling `HfsPlus.efi`, `OpenRuntime.efi`, `OpenCanopy.efi` and `AudioDxe.efi` in this order
+  - Add `Booter -> Quirks -> ResizeAppleGpuBars` key and set its value to `-1` (failsafe)
+  - Add `UEFI -> Quirks -> ResizeGpuBars` key and set its value to `-1` (failsafe)
+  - Update `UEFI -> Drivers` structure section for enabling `HfsPlus.efi`, `OpenRuntime.efi`, `OpenCanopy.efi` and `AudioDxe.efi` in this order
 
 ## 06-18-2021
 
