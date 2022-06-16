@@ -31,12 +31,12 @@ jobs:
 
       - name: Run makefile
         run: |
-          ./makefile.sh --version=${CUR_TAG} --pre_release=Kext --pre_release=OC --model=CMLKBL
+          ./makefile.sh --version=${CUR_TAG} --pre_release=Kext --pre_release=OC --model=CML
 
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: XiaoMi NoteBook Pro EFI ${{ env.CUR_TAG }}
+          name: Xiaomi Notebook 14 EFI ${{ env.CUR_TAG }}
           path: build/*.zip
 
       - name: Upload to Release
@@ -44,7 +44,7 @@ jobs:
         uses: ncipollo/release-action@v1.10.0
         with:
           artifacts: build/*.zip
-          bodyFile: build/XiaoMi_Pro-KBL-OC-${{ env.CUR_TAG }}/ReleaseNotes.md
+          bodyFile: build/Xiaomi_Notebook_14-K-OC-${{ env.CUR_TAG }}/ReleaseNotes.md
           name: XiaoMi NoteBook Pro EFI ${{ env.CUR_TAG }}
           prerelease: false
           tag: ${{ env.CUR_TAG }}
