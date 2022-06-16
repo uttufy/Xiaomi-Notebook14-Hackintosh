@@ -474,10 +474,10 @@ function bKextHelper() {
     else
       copyErr
     fi
-  elif [[ "$2" == "EAPD-Codec-Commander" ]]; then
-    cp -R "../MacKernelSDK" "./" || copyErr
-    xcodebuild -scheme CodecCommander -derivedDataPath . -configuration "$3" >/dev/null 2>&1 || buildErr "$2"
-    cp -R "${PATH_LONG_BIG}"*.kext "../KBL" || copyErr
+  # elif [[ "$2" == "EAPD-Codec-Commander" ]]; then
+  #   cp -R "../MacKernelSDK" "./" || copyErr
+  #   xcodebuild -scheme CodecCommander -derivedDataPath . -configuration "$3" >/dev/null 2>&1 || buildErr "$2"
+  #   cp -R "${PATH_LONG_BIG}"*.kext "../KBL" || copyErr
   elif [[ "$2" == "IntelBluetoothFirmware" ]]; then
     cp -R "../MacKernelSDK" "./" || copyErr
     # IntelBTPatcher needs Lilu as dependency
