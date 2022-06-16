@@ -960,7 +960,7 @@ function genNote() {
 
   lineStart=$(grep -n "Xiaomi Notebook 14  EFI v" ${changelogPath}) && lineStart=${lineStart%%:*} && lineStart=$((lineStart + 1))
   lineEnd=$(grep -n -m2 "XiaoMi Notebook 14 EFI v" ${changelogPath} | tail -n1)
-  lineEnd=${lineEnd%%:*} && lineEnd=$((lineEnd - 3))
+  lineEnd=${lineEnd%%:*} && lineEnd=$((lineEnd))
   sed -n "${lineStart},${lineEnd}p" ${changelogPath} >>ReleaseNotes.md
 
   # Generate Cloudflare links when using GitHub Action to publish EFI release
