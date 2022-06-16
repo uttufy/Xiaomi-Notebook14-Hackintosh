@@ -893,7 +893,7 @@ function main() {
   unpack
   patch
 
-  # Installation
+  # Install
   install
 
   extractOC
