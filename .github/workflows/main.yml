@@ -45,7 +45,7 @@ jobs:
         with:
           artifacts: build/*.zip
           bodyFile: build/Xiaomi_Notebook_14-K-OC-${{ env.CUR_TAG }}/ReleaseNotes.md
-          name: XiaoMi NoteBook Pro EFI ${{ env.CUR_TAG }}
+          name: XiaoMi NoteBook 14 EFI ${{ env.CUR_TAG }}
           prerelease: false
           tag: ${{ env.CUR_TAG }}
           token: ${{ secrets.GITHUB_TOKEN }}
