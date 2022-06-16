@@ -13,7 +13,7 @@
 ACDT="Acidanthera"
 CFURL="https://hackintosh.stevezheng.workers.dev"
 CFURL_1="https\://hackintosh.stevezheng.workers.dev"
-FRWF="0xFireWolf"
+# FRWF="0xFireWolf"
 OIW="OpenIntelWireless"
 REPO_NAME="Xiaomi-Notebook14-Hackintosh"
 REPO_BRANCH="main"
@@ -118,14 +118,14 @@ fi
 
 # Colors
 if [[ -z ${GITHUB_ACTIONS+x} ]]; then
-  black=$(tput setaf 0)
+  # black=$(tput setaf 0)
   red=$(tput setaf 1)
   green=$(tput setaf 2)
   yellow=$(tput setaf 3)
   blue=$(tput setaf 4)
-  magenta=$(tput setaf 5)
+  # magenta=$(tput setaf 5)
   cyan=$(tput setaf 6)
-  white=$(tput setaf 7)
+  # white=$(tput setaf 7)
   reset=$(tput sgr0)
   bold=$(tput bold)
 fi
@@ -149,10 +149,10 @@ acdtKexts=(
   BrcmPatchRAM
 )
 
-frwfKexts=(
-  RealtekCardReader
-  RealtekCardReaderFriend
-)
+# frwfKexts=(
+#   RealtekCardReader
+#   RealtekCardReaderFriend
+# )
 
 oiwKexts=(
   IntelBluetoothFirmware
@@ -402,7 +402,7 @@ function dPB() {
 # Build Pre-release Kexts
 function bKextHelper() {
   local liluPlugins
-  # local voodooinputPlugins="VoodooI2C VoodooPS2"
+  local voodooinputPlugins="VoodooI2C VoodooPS2"
   local PATH_LONG_BIG="Build/Products/$3/"
   local PATH_LONG_SMA="build/Products/$3/"
   local PATH_SHORT_SMA="build/$3/"
@@ -737,7 +737,7 @@ function install() {
     # "RealtekCardReader.kext"
     # "RealtekCardReaderFriend.kext"
     # "Release/NullEthernet.kext"
-    "RestrictEvents.kext"
+    # "RestrictEvents.kext"
     "VoodooI2C.kext"
     "VoodooI2CHID.kext"
     "VoodooPS2Controller.kext"
@@ -789,13 +789,13 @@ function install() {
 
   echo "${green}[${reset}${blue}${bold} Installing Kexts ${reset}${green}]${reset}"
   for model in "${model_list[@]}"; do
-    OUTDir_MODEL_CLOVER="OUTDir_${model}_CLOVER"
+    # OUTDir_MODEL_CLOVER="OUTDir_${model}_CLOVER"
     OUTDir_MODEL_OC="OUTDir_${model}_OC"
     model_prefix=$(echo "${model}" | tr '[:upper:]' '[:lower:]')
     model_kextItems="${model_prefix}KextItems"
     model_wifiKextItems="${model_prefix}WifiKextItems"
     # model_cloverKextFolders="${model_prefix}CloverKextFolders"
-    model_cloverIbtInjctrDirs="${model_prefix}CloverIbtInjctrDirs"
+    # model_cloverIbtInjctrDirs="${model_prefix}CloverIbtInjctrDirs"
     kextItems="${model_kextItems}[@]"
     for kextDir in "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/"; do
       mkdir -p "${kextDir}" || exit 1
@@ -1156,8 +1156,8 @@ function install() {
   # fi
 
   # if [[ "${model_input}" =~ "KBL" ]]; then
-  #   local OUTDir_MODEL_CLOVER="OUTDir_KBL_CLOVER"
-  #   local OUTDir_MODEL_OC="OUTDir_KBL_OC"
+  # local OUTDir_MODEL_CLOVER="OUTDir_KBL_CLOVER"
+  # local OUTDir_MODEL_OC="OUTDir_KBL_OC"
   #   if [[ ${remote} == true ]]; then
   #     cp -R ALCPlugFix-master/* "${REPO_NAME_BRANCH}/ALCPlugFix/ALCPlugFix_kbl/" || copyErr
   #   else
@@ -1307,7 +1307,7 @@ function genNote() {
 function cTrash() {
   echo "${green}[${reset}${blue}${bold} Cleaning Trash Files ${reset}${green}]${reset}"
   if [[ ${clean_up} == true ]]; then
-    find . -maxdepth 1 ! -path "./${OUTDir_KBL_CLOVER}" ! -path "./${OUTDir_KBL_OC}" ! -path "./${OUTDir_CML_CLOVER}" ! -path "./${OUTDir_CML_OC}" -exec rm -rf {} + >/dev/null 2>&1
+    find . -maxdepth 1 ! -path "./${OUTDir_CML_OC}" -exec rm -rf {} + >/dev/null 2>&1
   fi
   echo
 }
