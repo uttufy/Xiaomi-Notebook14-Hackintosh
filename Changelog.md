@@ -1,6 +1,6 @@
 # XiaoMi NoteBook Pro EFI Changelog
 
-## [Xiaomi Notebook 14 EFI v2.1.0]](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/releases/tag/2.2.0)
+## [Xiaomi Notebook 14 EFI v2.1.0](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/releases/tag/2.2.0)
 ## 17-06-2022
  - Update `OpenCore` v0.8.2 (up to [acidanthera/OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/commit/714fc69f96ceffc06fec3347bab66d31314bebfb))to support macOS13.0 beta 1 (22A5266r)
   - Update `Lilu` v1.6.1 
