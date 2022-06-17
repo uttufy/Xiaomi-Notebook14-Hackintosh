@@ -232,8 +232,6 @@ function h_or_g() {
     hgs=("grep -m 1 CloverV2")
   elif [[ "$1" == "build-repo" ]]; then
     hgs=("grep -A 2 OpenCorePkg | grep -m 1 ${download_mode}")
-  elif [[ "$1" == "EAPD-Codec-Commander" ]]; then
-    hgs=("grep -m 2 CodecCommander | grep -m 1 ${download_mode}")
   elif [[ "$1" == "IntelBluetoothFirmware" ]]; then
     hgs=("grep -m 1 IntelBluetooth")
   elif [[ "$1" == "itlwm" ]]; then
@@ -475,10 +473,6 @@ function bKextHelper() {
     if cp -R "build/Debug/VoodooInput.kext" "../VoodooInput_build/Debug/"; then
       cp -R "build/Release/VoodooInput.kext" "../VoodooInput_build/Release/" else copyErr
     fi
-  elif [[ "$2" == "EAPD-Codec-Commander" ]]; then
-    cp -R "../MacKernelSDK" "./" || copyErr
-    xcodebuild -scheme CodecCommander -derivedDataPath . -configuration "$3" >/dev/null 2>&1 || buildErr "$2"
-    cp -R "${PATH_LONG_BIG}"*.kext "../KBL" || copyErr
   elif [[ "$2" == "IntelBluetoothFirmware" ]]; then
     cp -R "../MacKernelSDK" "./" || copyErr
     # IntelBTPatcher needs Lilu as dependency
@@ -545,30 +539,19 @@ function bKext() {
     exit 1
   fi
 
-  if [[ ${language} != "zh_CN" ]]; then
-    git clone -q https://github.com/acidanthera/MacKernelSDK || networkErr "MacKernelSDK"
-    # src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" >/dev/null 2>&1 || networkErr "Lilu"
+  git clone -q https://github.com/acidanthera/MacKernelSDK || networkErr "MacKernelSDK"
+  # src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh) && eval "$src" >/dev/null 2>&1 || networkErr "Lilu"
 
-    if src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh); then
-      eval "$src" else networkErr "Lilu" >/dev/null 2>&1
-    fi
-    # src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" >/dev/null 2>&1 || networkErr "VoodooInput"
-    if src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh); then
-      eval "$src" else networkErr "VoodooInput" >/dev/null 2>&1
-    fi
-  else
-    git clone -q ${CFURL}/https://github.com/acidanthera/MacKernelSDK || networkErr "MacKernelSDK"
-    bKextHelper ${ACDT} "Lilu" "Debug"
-    bKextHelper ${ACDT} "VoodooInput"
-    rm -rf "Lilu" && rm -rf "VoodooInput"
-    mv "VoodooInput_build" "VoodooInput"
+  if src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/Lilu/master/Lilu/Scripts/bootstrap.sh); then
+    eval "$src" else networkErr "Lilu" >/dev/null 2>&1
   fi
-  if [[ ${model_input} =~ "CML" ]]; then
-    bKextHelper al3xtjames NoTouchID "${build_mode}"
+  # src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" >/dev/null 2>&1 || networkErr "VoodooInput"
+  if src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh); then
+    eval "$src" else networkErr "VoodooInput" >/dev/null 2>&1
   fi
-  if [[ ${model_input} =~ "KBL" ]]; then
-    bKextHelper Sniki EAPD-Codec-Commander "${build_mode}"
-  fi
+
+  bKextHelper al3xtjames NoTouchID "${build_mode}"
+
   # for frwfKext in "${frwfKexts[@]}"; do
   #   bKextHelper ${FRWF} "${frwfKext}" "${build_mode}"
   # done
@@ -687,7 +670,7 @@ function install() {
   # Kexts
   local sharedKextItems=(
     "HibernationFixup.kext"
-    "CPUFriend.kext"
+    # "CPUFriend.kext"
     "Release/NullEthernet.kext"
     "Kexts/SMCBatteryManager.kext"
     "Kexts/SMCDellSensors.kext"
@@ -696,14 +679,15 @@ function install() {
     "Kexts/SMCProcessor.kext"
     "Kexts/VirtualSMC.kext"
     "Lilu.kext"
-    "VoodooI2C.kext"
-    "VoodooI2CHID.kext"
-    "VoodooPS2Controller.kext"
+    # "VoodooI2C.kext"
+    # "VoodooI2CHID.kext"
+    # "VoodooPS2Controller.kext"
     "WhateverGreen.kext"
   )
 
   local cmlKextItems=(
     "AppleALC.kext"
+    "AppleALCU.kext"
     "IntelBluetoothFirmware.kext"
   )
   if [[ "${pre_release}" =~ "Kext" ]]; then
@@ -761,13 +745,13 @@ function install() {
 
     # Move IntelBluetoothInjector and BlueToolFixup to corresponding Clover and OC Kext folders
 
-    if [[ "${pre_release}" =~ "Kext" ]]; then
-      cp -R "${model}/IntelBluetoothInjector.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
-      # cp -R "${model}/IntelBTPatcher.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
-    else
-      cp -R "IntelBluetoothInjector.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
-      # cp -R "IntelBTPatcher.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
-    fi
+    # if [[ "${pre_release}" =~ "Kext" ]]; then
+    #   cp -R "${model}/IntelBluetoothInjector.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
+    #   # cp -R "${model}/IntelBTPatcher.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
+    # else
+    #   cp -R "IntelBluetoothInjector.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
+    #   # cp -R "IntelBTPatcher.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
+    # fi
     cp -R "BlueToolFixup.kext" "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/" || copyErr
   done
   echo
@@ -861,9 +845,9 @@ function install() {
     cp -R "OcBinaryData-master/Resources" "${!OUTDir_MODEL_OC}/EFI/OC/" || copyErr
 
     # Custom uttu Theme
-    for themes in "${!OUTDir_MODEL_OC}/EFI/OC/Resources/Image"; do
+    for themes in "${!OUTDir_MODEL_OC}/EFI/OC/Resources/Image/"; do
       if [[ ${remote} == true ]]; then
-        cp -R "${REPO_NAME_BRANCH}/Themes/release" "${themes}" || copyErr
+        cp -R "${REPO_NAME_BRANCH}/Themes/release/" "${themes}" || copyErr
       else
         cp -R "../Themes/release" "${themes}" || copyErr
       fi
@@ -1031,7 +1015,7 @@ function art() {
 ::::: ::   ::        :: ::::   ::   ::   ::: :::  ::::: ::  ::   :::   :: ::::  
  : :  :    :        : :: ::   ::    :    :: :: :   : :  :    :   : :  : :: ::   
 "
-  echo "Xaomi Notebook 14 EFI Build"
+  echo "Xiaomi Notebook 14 EFI Build"
   echo "Author : Utkarsh Sharma"
   echo "Reference : daliansky, williambj1"
 }
