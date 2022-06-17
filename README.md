@@ -52,6 +52,8 @@ git clone --depth=1 https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh
 cd Xiaomi-Notebook14-Hackintosh
 ./makefile.sh
 ```
+Make sure to run `ocvalidate` after build finish. since build script will pull latest opencore version `config.plist` must be validated first.
+
 Some advanced usages are:
 ```shell
 # Build EFI with kexts and OpenCore in Debug version
@@ -84,7 +86,7 @@ Some advanced usages are:
 
 ## Current Status
 
-| Components\OS     | BigSur | Monterey 12.0.1/12.1 |
+| Components\OS     | BigSur | Monterey 12.04.0 |
 | ----------------- | ------ | -------------------- |
 | Touchpad/Gestures | ✅      | ✅                    |
 | Keyboard          | ✅      | ✅                    |
@@ -227,7 +229,7 @@ Starts from [VoodooI2C v2.4.1](https://github.com/alexandred/VoodooI2C/releases/
 ### My screen turns to black and has no response during the updating process
 
 If you have black screen for five minutes and get no response from the device, please force restart your laptop(Long press power button) and choose `Boot macOS Install from ~` entry.- [Xiaomi Notebook 14 Hackintosh]
-
+<!-- 
 ## Update tracker
 
 as per latest commit
@@ -251,7 +253,7 @@ as per latest commit
 | [VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2/releases)                       | 2.2.7   | Enable keyboard, alternative trackpad driver |
 | [VirtualSMC + plugins](https://github.com/acidanthera/VirtualSMC/releases)                     | 1.2.8   | SMC chip emulation                           |
 | [USBInjectAll](https://github.com/daliansky/OS-X-USB-Inject-All/releases)                      | 0.7.6   | Inject USB ports                             |
-
+ -->
 ## Changelog
 
 You can view [Changelog](Changelog.md) for detailed information.
