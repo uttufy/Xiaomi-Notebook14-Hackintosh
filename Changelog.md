@@ -1,5 +1,8 @@
 # XiaoMi NoteBook Pro EFI Changelog
 
+
+## [Xiaomi Notebook 14 EFI v2.1.0](https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh/releases/tag/2.1.0)
+
 ## 29-10-2022
 **Update**
 - Remove `USBMap.kext`
