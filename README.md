@@ -49,7 +49,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/uttusharma/Xiaomi-Notebook
 Or run the following command in Terminal:
 ```shell
 git clone --depth=1 https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh
-cd XiaoMi-Pro-Hackintosh
+cd Xiaomi-Notebook14-Hackintosh
 ./makefile.sh
 ```
 Some advanced usages are:
