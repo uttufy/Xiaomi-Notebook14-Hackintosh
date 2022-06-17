@@ -863,9 +863,9 @@ function install() {
     # Custom uttu Theme
     for themes in "${!OUTDir_MODEL_OC}/EFI/OC/Resources/Image"; do
       if [[ ${remote} == true ]]; then
-        cp -R "${REPO_NAME_BRANCH}/Themes" "${themes}" || copyErr
+        cp -R "${REPO_NAME_BRANCH}/Themes/release" "${themes}" || copyErr
       else
-        cp -R "../Themes/" "${themes}" || copyErr
+        cp -R "../Themes/release" "${themes}" || copyErr
       fi
     done
 
@@ -1033,7 +1033,7 @@ function art() {
 "
   echo "Xaomi Notebook 14 EFI Build"
   echo "Author : Utkarsh Sharma"
-  echo "Refrence : daliansky, williambj1"
+  echo "Reference : daliansky, williambj1"
 }
 
 function main() {
