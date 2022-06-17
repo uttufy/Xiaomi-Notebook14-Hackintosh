@@ -939,7 +939,18 @@ function extractOC() {
 
     # Copy ocvalidate for update script
     mkdir -p "${!OUTDir_MODEL_OC}/Utilities/" || exit 1
+
     cp "OpenCore/Utilities/ocvalidate/ocvalidate" "${!OUTDir_MODEL_OC}/Utilities/" || copyErr
+
+    # Copy Util
+    for util in "${!OUTDir_MODEL_OC}/Utilities/"; do
+      if [[ ${remote} == true ]]; then
+        cp -R "${REPO_NAME_BRANCH}/Utilities/" "${util}" || copyErr
+      else
+        cp -R "../Utilities/" "${util}" || copyErr
+      fi
+    done
+
   done
   echo
 }
@@ -1007,7 +1018,26 @@ function enjoy() {
   open ./
 }
 
+function art() {
+  echo "                                                                            
+ @@@@@@   @@@@@@@   @@@@@@@@  @@@  @@@   @@@@@@@   @@@@@@   @@@@@@@   @@@@@@@@  
+@@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@ @@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  
+@@!  @@@  @@!  @@@  @@!       @@!@!@@@  !@@       @@!  @@@  @@!  @@@  @@!       
+!@!  @!@  !@!  @!@  !@!       !@!!@!@!  !@!       !@!  @!@  !@!  @!@  !@!       
+@!@  !@!  @!@@!@!   @!!!:!    @!@ !!@!  !@!       @!@  !@!  @!@!!@!   @!!!:!    
+!@!  !!!  !!@!!!    !!!!!:    !@!  !!!  !!!       !@!  !!!  !!@!@!    !!!!!:    
+!!:  !!!  !!:       !!:       !!:  !!!  :!!       !!:  !!!  !!: :!!   !!:       
+:!:  !:!  :!:       :!:       :!:  !:!  :!:       :!:  !:!  :!:  !:!  :!:       
+::::: ::   ::        :: ::::   ::   ::   ::: :::  ::::: ::  ::   :::   :: ::::  
+ : :  :    :        : :: ::   ::    :    :: :: :   : :  :    :   : :  : :: ::   
+"
+  echo "Xaomi Notebook 14 EFI Build"
+  echo "Author : Utkarsh Sharma"
+  echo "Refrence : daliansky, williambj1"
+}
+
 function main() {
+  art
   init
   if [[ ${skip_download} == false ]]; then
     download
