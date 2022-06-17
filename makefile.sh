@@ -847,9 +847,9 @@ function install() {
     # Custom uttu Theme
     for themes in "${!OUTDir_MODEL_OC}/EFI/OC/Resources/Image/"; do
       if [[ ${remote} == true ]]; then
-        cp -R "${REPO_NAME_BRANCH}/Themes/release/" "${themes}" || copyErr
+        cp -R "${REPO_NAME_BRANCH}/Themes/release/uttu" "${themes}" || copyErr
       else
-        cp -R "../Themes/release" "${themes}" || copyErr
+        cp -R "../Themes/release/uttu" "${themes}" || copyErr
       fi
     done
 
