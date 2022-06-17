@@ -136,7 +136,7 @@ acdtKexts=(
   WhateverGreen
   AppleALC
   HibernationFixup
-  RestrictEvents
+  CPUFriend
   VoodooPS2
   BrcmPatchRAM
 )
@@ -395,7 +395,7 @@ function bKextHelper() {
   local PATH_VI2C="Build/Products/Release/"
   local lineNum
 
-  liluPlugins="AppleALC BrcmPatchRAM HibernationFixup RealtekCardReaderFriend VirtualSMC WhateverGreen RestrictEvents NoTouchID"
+  liluPlugins="AppleALC BrcmPatchRAM HibernationFixup RealtekCardReaderFriend VirtualSMC WhateverGreen CPUFriend NoTouchID"
 
   echo "${green}[${reset}${blue}${bold} Building $2 ${reset}${green}]${reset}"
   git clone --depth=1 -q https://github.com/"$1"/"$2".git || networkErr "$2"
@@ -598,7 +598,7 @@ function download() {
   fi
 
   # Kexts
-  # dBR Rehabman os-x-null-ethernet
+  dBR Rehabman os-x-null-ethernet
 
   if [[ "${pre_release}" =~ "Kext" ]]; then
     bKext
@@ -687,7 +687,11 @@ function install() {
   # Kexts
   local sharedKextItems=(
     "HibernationFixup.kext"
+    "CPUFriend.kext"
+    "Release/NullEthernet.kext"
     "Kexts/SMCBatteryManager.kext"
+    "Kexts/SMCDellSensors.kext"
+    "Kexts/SMCSuperIO.kext"
     "Kexts/SMCLightSensor.kext"
     "Kexts/SMCProcessor.kext"
     "Kexts/VirtualSMC.kext"
@@ -697,26 +701,25 @@ function install() {
     "VoodooPS2Controller.kext"
     "WhateverGreen.kext"
   )
-  if [[ "${model_input}" =~ "CML" ]]; then
-    local cmlKextItems=(
-      "AppleALC.kext"
-      "IntelBluetoothFirmware.kext"
-    )
-    if [[ "${pre_release}" =~ "Kext" ]]; then
-      cmlKextItems=("${cmlKextItems[@]/#/CML/}")
-    fi
-    cmlKextItems+=(
-      "${sharedKextItems[@]}"
-    )
-    local cmlWifiKextItems=(
-      "Big Sur/AirportItlwm_Big_Sur.kext"
-      "Catalina/AirportItlwm_Catalina.kext"
-      "Monterey/AirportItlwm_Monterey.kext"
-      "Ventura/AirportItlwm_Ventura.kext"
-    )
-    if [[ "${pre_release}" =~ "Kext" ]]; then
-      cmlWifiKextItems=("${cmlWifiKextItems[@]/#/CML/}")
-    fi
+
+  local cmlKextItems=(
+    "AppleALC.kext"
+    "IntelBluetoothFirmware.kext"
+  )
+  if [[ "${pre_release}" =~ "Kext" ]]; then
+    cmlKextItems=("${cmlKextItems[@]/#/CML/}")
+  fi
+  cmlKextItems+=(
+    "${sharedKextItems[@]}"
+  )
+  local cmlWifiKextItems=(
+    "Big Sur/AirportItlwm_Big_Sur.kext"
+    "Catalina/AirportItlwm_Catalina.kext"
+    "Monterey/AirportItlwm_Monterey.kext"
+    "Ventura/AirportItlwm_Ventura.kext"
+  )
+  if [[ "${pre_release}" =~ "Kext" ]]; then
+    cmlWifiKextItems=("${cmlWifiKextItems[@]/#/CML/}")
   fi
 
   echo "${green}[${reset}${blue}${bold} Installing Kexts ${reset}${green}]${reset}"
@@ -727,11 +730,21 @@ function install() {
     model_kextItems="${model_prefix}KextItems"
     model_wifiKextItems="${model_prefix}WifiKextItems"
     kextItems="${model_kextItems}[@]"
+
     for kextDir in "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/"; do
       mkdir -p "${kextDir}" || exit 1
       for kextItem in "${!kextItems}"; do
         cp -R "${kextItem}" "${kextDir}" || copyErr
       done
+    done
+
+    # copy USB MAP, Brightness Keys kexts
+    for usbToolDir in "${!OUTDir_MODEL_OC}/EFI/OC/Kexts/"; do
+      if [[ ${remote} == true ]]; then
+        cp -R "${REPO_NAME_BRANCH}/Kexts" "${usbToolDir}" || copyErr
+      else
+        cp -R "../Kexts/" "${usbToolDir}" || copyErr
+      fi
     done
 
     # CML: NoTouchID.kext
@@ -761,7 +774,7 @@ function install() {
 
   # Drivers
   local driverItems=(
-    # "OcBinaryData-master/Drivers/ExFatDxe.efi"
+    "OcBinaryData-master/Drivers/ExFatDxe.efi"
     "OcBinaryData-master/Drivers/HfsPlus.efi"
   )
 
@@ -846,6 +859,16 @@ function install() {
     OUTDir_MODEL_OC="OUTDir_${model}_OC"
 
     cp -R "OcBinaryData-master/Resources" "${!OUTDir_MODEL_OC}/EFI/OC/" || copyErr
+
+    # Custom uttu Theme
+    for themes in "${!OUTDir_MODEL_OC}/EFI/OC/Resources/Image"; do
+      if [[ ${remote} == true ]]; then
+        cp -R "${REPO_NAME_BRANCH}/Themes" "${themes}" || copyErr
+      else
+        cp -R "../Themes/" "${themes}" || copyErr
+      fi
+    done
+
   done
   echo
 
@@ -884,9 +907,18 @@ function extractOC() {
     "OpenCore/X64/EFI/OC/Drivers/OpenRuntime.efi"
     "OpenCore/X64/EFI/OC/Drivers/ResetNvramEntry.efi"
     "OpenCore/X64/EFI/OC/Drivers/ToggleSipEntry.efi"
+    "OpenCore/X64/EFI/OC/Drivers/OpenHfsPlus.efi"
+    "OpenCore/X64/EFI/OC/Drivers/OpenPartitionDxe.efi"
+    "OpenCore/X64/EFI/OC/Drivers/OpenLinuxBoot.efi"
+    "OpenCore/X64/EFI/OC/Drivers/NvmExpressDxe.efi"
   )
   local toolItems=(
     "OpenCore/X64/EFI/OC/Tools/OpenShell.efi"
+    "OpenCore/X64/EFI/OC/Tools/BootKicker.efi"
+    "OpenCore/X64/EFI/OC/Tools/CleanNvram.efi"
+    "OpenCore/X64/EFI/OC/Tools/CsrUtil.efi"
+    "OpenCore/X64/EFI/OC/Tools/OpenControl.efi"
+    "OpenCore/X64/EFI/OC/Tools/ResetSystem.efi"
   )
 
   echo "${green}[${reset}${blue}${bold} Extracting OpenCore ${reset}${green}]${reset}"
