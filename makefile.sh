@@ -871,7 +871,7 @@ function install() {
         cp "${REPO_NAME_BRANCH}/SECURITY.md" "${readmeDir}" || copyErr
       done
     else
-      cp "../EFI/OC/${model_config}" "${!OUTDir_MODEL_OC}/EFI/OC/config.plist" || copyErr
+      cp "../EFI/OC/${model_config}" "${!OUTDir_MODEL_OC}/config/config.plist" || copyErr
       for readmeDir in "${!OUTDir_MODEL_OC}"; do
         cp "../README.md" "${readmeDir}" || copyErr
         cp "../LICENSE" "${readmeDir}" || copyErr
