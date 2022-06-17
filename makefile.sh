@@ -857,7 +857,7 @@ function install() {
     model_prefix=$(echo "${model}" | tr '[:upper:]' '[:lower:]')
     model_config="config.plist"
     if [[ ${remote} == true ]]; then
-      cp "${REPO_NAME_BRANCH}/EFI/OC/${model_config}" "${!OUTDir_MODEL_OC}/EFI/OC/config.plist" || copyErr
+      cp "${REPO_NAME_BRANCH}/config/${model_config}" "${!OUTDir_MODEL_OC}/EFI/OC/config.plist" || copyErr
       for readmeDir in "${!OUTDir_MODEL_OC}"; do
         cp "${REPO_NAME_BRANCH}/README.md" "${readmeDir}" || copyErr
         cp "${REPO_NAME_BRANCH}/LICENSE" "${readmeDir}" || copyErr
