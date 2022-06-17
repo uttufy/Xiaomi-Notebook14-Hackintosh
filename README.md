@@ -27,6 +27,7 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
 - [Xiaomi Notebook 14 Hackintosh](#xiaomi-notebook-14-hackintosh)
   - [Introduction](#introduction)
   - [Table of contents](#table-of-contents)
+  - [Build](#build)
   - [System Configuration](#system-configuration)
   - [Current Status](#current-status)
   - [Generate your own SMBIOS Information](#generate-your-own-smbios-information)
@@ -38,6 +39,34 @@ With each new release of macOS we need to resolve each new "minor issue" we run 
   - [Update tracker](#update-tracker)
   - [Changelog](#changelog)
   - [Credits](#credits)
+
+## Build
+
+Build the latest beta EFI by running the following command in Terminal:
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/uttusharma/Xiaomi-Notebook14-Hackintosh/master/makefile.sh)"
+```
+Or run the following command in Terminal:
+```shell
+git clone --depth=1 https://github.com/uttusharma/Xiaomi-Notebook14-Hackintosh
+cd XiaoMi-Pro-Hackintosh
+./makefile.sh
+```
+Some advanced usages are:
+```shell
+# Build EFI with kexts and OpenCore in Debug version
+./makefile.sh --debug_KextOC
+# Ignore errors when the script is running
+./makefile.sh --ignore_err
+# Preserve work files during the building stage
+./makefile.sh --no_clean_up
+# Use GitHub API
+./makefile.sh --gh_api
+# Build the latest beta EFI with pre-release kexts
+./makefile.sh --pre_release=Kext
+# Build the latest beta EFI with pre-release OpenCore
+./makefile.sh --pre_release=OC
+```
 
 ## System Configuration
 
